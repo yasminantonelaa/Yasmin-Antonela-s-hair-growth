@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin Antonela's Hair Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Emojis decorativos -->
+    <div class="emoji-sidebar sidebar-left">
+        <span>🌈</span><span>🐨</span><span>🧳</span><span>🏷️</span><span>☀️</span><span>✈️</span>
+    </div>
+    <div class="emoji-sidebar sidebar-right">
+        <span>✈️</span><span>☀️</span><span>🏷️</span><span>🧳</span><span>🐨</span><span>🌈</span>
+    </div>
+
+    <!-- POP-UP MÚSICA LOCAL -->
+<div id="musicPopup" class="music-popup">
+    <div class="music-header">
+        <span>🎵 Midnight Sun - Zara Larsson</span>
+        <button id="closeMusicBtn" class="close-music">✖</button>
+    </div>
+    <div class="music-body">
+        <audio id="audioPlayer" controls autoplay loop style="width: 100%; margin-top: 10px;">
+            <source src="midnight-sun.mp3" type="audio/mpeg">
+            Seu navegador não suporta o reprodutor de áudio.
+        </audio>
+    </div>
+</div>
+
+    <div class="container">
+        <header class="header-rainbow">
+            <h1>Yasmin Antonela's hair growth</h1>
+        </header>
+
+        <!-- Contador de Crescimento -->
+        <div class="card">
+            <h2>✨ Contador de Crescimento ✨</h2>
+            <label for="dataCorte">Quando foi a última vez que você cortou o cabelo?</label>
+            <input type="date" id="dataCorte">
+            <button id="btnCalcular">Calcular</button>
+
+            <div id="resultado" class="resultado" style="display: none;">
+                Você está há <span id="dias">0</span> dias sem cortar o cabelo!<br>
+                Seu cabelo deve ter crescido em média <span id="cm">0</span> cm nesse tempo. 🌱
+            </div>
+        </div>
+
+        <!-- Cronograma Capilar -->
+        <div class="card">
+            <h2>🌸 Seu Cronograma Capilar 🌸</h2>
+            <p class="instrucao-hover">💡 Passe o mouse sobre os dias para ver dicas e rotinas!</p>
+            
+            <div class="cronograma-grid">
+                <div class="dia-item hidratacao">
+                    <div class="dia-titulo">Segunda</div>
+                    <span class="etapa-tag tag-h">Hidratação</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Passo a Passo: Hidratação ☁️</div>
+                        <ol>
+                            <li>Lave 2x com xampu no couro cabeludo e enxágue.</li>
+                            <li>Tire o excesso de água com a toalha.</li>
+                            <li>Aplique a máscara de hidratação enluvando as mechas. Deixe agir por 10 a 15 min.</li>
+                            <li>Enxágue bem e sele com o condicionador.</li>
+                        </ol>
+                        <div class="misturinha">
+                            <strong>✨ Dica de Misturinha Caseira:</strong><br>
+                            2 colheres de máscara + 1 colher de babosa ou mel + 1 tampinha de D-Pantenol!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia-item">
+                    <div class="dia-titulo">Terça</div>
+                    <span class="etapa-tag tag-p">Pausa</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Dia de Pausa ☁️</div>
+                        <p>Deixe seus fios descansarem! Proteja do sol e use reparador de pontas.</p>
+                    </div>
+                </div>
+
+                <div class="dia-item nutricao">
+                    <div class="dia-titulo">Quarta</div>
+                    <span class="etapa-tag tag-n">Nutrição</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Passo a Passo: Nutrição ☁️</div>
+                        <ol>
+                            <li>Lave o cabelo suavemente com xampu.</li>
+                            <li>Aplique a máscara nutritiva mecha por mecha.</li>
+                            <li>Deixe agir pelo tempo do rótulo e sele com condicionador.</li>
+                        </ol>
+                        <div class="misturinha">
+                            <strong>✨ Dica de Misturinha Caseira:</strong><br>
+                            2 colheres de máscara + 1 colherzinha de óleo vegetal (coco, abacate ou azeite).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia-item">
+                    <div class="dia-titulo">Quinta</div>
+                    <span class="etapa-tag tag-p">Pausa</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Dia de Pausa ☁️</div>
+                        <p>Faça uma massagem suave no couro cabeludo para estimular o crescimento!</p>
+                    </div>
+                </div>
+
+                <div class="dia-item hidratacao">
+                    <div class="dia-titulo">Sexta</div>
+                    <span class="etapa-tag tag-h">Hidratação</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Passo a Passo: Hidratação ☁️</div>
+                        <ol>
+                            <li>Lave o couro cabeludo com xampu.</li>
+                            <li>Aplique a máscara de hidratação e aguarde 15 min.</li>
+                            <li>Enxágue e finalize com condicionador e protetor térmico.</li>
+                        </ol>
+                        <div class="misturinha">
+                            <strong>✨ Dica de Misturinha Caseira:</strong><br>
+                            2 colheres de máscara + 1 colher de maizena + 1 colher de açúcar.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia-item">
+                    <div class="dia-titulo">Sábado</div>
+                    <span class="etapa-tag tag-p">Pausa</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Dia de Pausa ☁️</div>
+                        <p>Use uma fronha de cetim para dormir e evitar o atrito e o frizz!</p>
+                    </div>
+                </div>
+
+                <div class="dia-item reconstrucao">
+                    <div class="dia-titulo">Domingo</div>
+                    <span class="etapa-tag tag-r">Reconstrução*</span>
+                    <div class="cloud-tooltip">
+                        <div class="cloud-title">☁️ Passo a Passo: Reconstrução ☁️</div>
+                        <ol>
+                            <li>Lave bem os fios com xampu.</li>
+                            <li>Aplique a máscara reconstrutora ou queratina líquida.</li>
+                            <li>Deixe agir por 10 a 15 min e enxágue bem.</li>
+                        </ol>
+                        <div class="misturinha">
+                            <strong>✨ Dica de Misturinha Caseira:</strong><br>
+                            2 colheres de máscara + 1 colher de gelatina incolor dissolvida em água morna.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="obs-cronograma">* Alterne a Reconstrução para cada 15 dias se o cabelo não estiver danificado.</p>
+        </div>
+
+        <!-- Seção Girl Power -->
+        <div class="card card-girlpower">
+            <h2>💪 NÃO DESISTA DESSE PROJETO:</h2>
+            <ul class="frases-lista">
+                <li>👑 "Você sonha há tempos com um cabelão"</li>
+                <li>💖 "Se for cortar agora, vai ficar com uma cabeça gigante e cara inchada"</li>
+                <li>🚀 "YASMIN PRECISAMOS DE CONSTÂNCIA E DISCIPLINA!!!!!!!!!!!!"</li>
+                <li>🌷 "Se decidir cortar, espera no minimo 20 dias até ir no salão. Não vale repetir corte antigo, tem que ser um novo e que combine com o nosso rosto. ( faça teste de visagismo antes de cortar )"</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- BOTÃO NUVEM CHATBOT -->
+    <button id="chatToggleBtn" class="cloud-chat-btn" title="Conversar com sua Amiga Virtual">
+        ☁️
+        <span class="cloud-btn-text">Amiga YA</span>
+    </button>
+
+    <!-- JANELA DO CHATBOT -->
+    <div id="chatWindow" class="chat-window hidden">
+        <div class="chat-header">
+            <span>✨ IAsmin, sua cabeleleira virtual💕</span>
+            <button id="closeChatBtn" class="close-chat">✖</button>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+            <div class="message bot-message">
+                Oii, amiga! 🌸 Estou aqui para te dar as melhores dicas para o seu cabelo e levantar sua autoestima. O que você gostaria de conversar hoje?
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Com carinho, Yasmin Antonela que quer ver o bebelo grande 💕</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
