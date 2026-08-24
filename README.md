@@ -119,4 +119,4 @@ Projeto pessoal, sem licença de uso comercial definida.
 
 ---
 
-Com carinho, Yasmin Antonela que quer ver o cabelo grande 💕
+Com carinho, Yasmin Antonela (eu) que quer ver o cabelo grande 💕
